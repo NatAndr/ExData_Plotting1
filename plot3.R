@@ -14,7 +14,7 @@ DateTime <- paste(as.Date(df2$Date, format = "%d/%m/%Y"), df2$Time)
 #add new column DateTime
 df3 <- cbind(DateTime = strptime(DateTime, "%Y-%m-%d %H:%M:%S"), df2)
 
-pcolors <- c("black", "blue", "red")
+pcolors <- c("black", "red", "blue")
 
 with(df3, {
 	# set up the plot
