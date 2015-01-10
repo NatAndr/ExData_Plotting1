@@ -2,7 +2,7 @@
 
 #read data
 df1 <- read.table("./exdata-data-household_power_consumption/household_power_consumption.txt", 
-header = TRUE, sep = ";", na.strings = "?", 
+header = TRUE, sep = ";", na.strings = c("?", ""), 
 colClasses = c("character", "character", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric"))
    
 

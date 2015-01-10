@@ -2,7 +2,7 @@
 
 #read data
 df1 <- read.table("./exdata-data-household_power_consumption/household_power_consumption.txt", 
-header = TRUE, sep = ";", na.strings = "?", 
+header = TRUE, sep = ";", na.strings = c("?", ""), 
 colClasses = c("character", "character", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric", "numeric"))
    
 #using data from the dates 2007-02-01 and 2007-02-02
@@ -18,7 +18,7 @@ with(df3, {
 	# set up the plot
 	plot(DateTime, Global_active_power, type = "n", xlab = "", ylab = "Global Active Power (kilowatts)")
 	# add lines
-	lines(x, y)
+	lines(DateTime, Global_active_power)
 })
 
 # Copy plot to a PNG file
